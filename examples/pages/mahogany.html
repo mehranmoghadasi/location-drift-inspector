@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mahogany office — Northgate Rentals (sample page)</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://yourdomain.com/#org",
+        "name": "Northgate Rentals",
+        "logo": "https://yourdomain.com/logo.png",
+        "sameAs": ["https://www.facebook.com/example-northgate", "https://www.linkedin.com/company/example-northgate"]
+      },
+      {
+        "@type": "RealEstateAgent",
+        "@id": "https://yourdomain.com/locations/mahogany#location",
+        "name": "Northgate Rentals Mahogany",
+        "url": "https://yourdomain.com/locations/mahogany",
+        "parentOrganization": { "@id": "https://yourdomain.com/#org" },
+        "image": "https://yourdomain.com/img/mahogany-office.jpg",
+        "telephone": "+1 403 555 0150",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "77 Placeholder Blvd SE",
+          "addressLocality": "Calgary",
+          "addressRegion": "AB",
+          "postalCode": "T3M 0E5",
+          "addressCountry": "CA"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 50.8963, "longitude": -113.9512 },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "112" },
+        "openingHours": ["Mo-Fr 09:00-17:00", "Sa 10:00-14:00"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Northgate Rentals Mahogany</h1>
+    <p>77 Placeholder Blvd SE, Calgary, AB T3M 0E5</p>
+    <p>Call us: <a href="tel:+14035550150">403-555-0150</a></p>
+    <h2>Office hours</h2>
+    <ul>
+      <li>Monday – Friday: 9:00 AM – 6:00 PM</li>
+      <li>Saturday: 10 AM – 2 PM</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </main>
+</body>
+</html>
