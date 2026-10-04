@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Location Drift Inspector — Dashboard</title>
+  <link rel="stylesheet" href="../ui/tokens.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="shell">
+    <nav class="side" aria-label="Sections">
+      <div class="brand">Location<br>Drift Inspector</div>
+      <button class="nav" data-view="locations" aria-current="page">Locations</button>
+      <button class="nav" data-view="import">Import spreadsheet</button>
+      <button class="nav" data-view="settings">Pages &amp; settings</button>
+    </nav>
+    <div class="main">
+      <header class="top">
+        <div>
+          <h1 id="title">Locations</h1>
+          <p id="subtitle" class="muted"></p>
+        </div>
+        <div class="tools">
+          <label>As of <input id="as-of" type="date"></label>
+          <button id="scan-all" class="primary">Scan all pages</button>
+          <div class="export">
+            <button id="export-toggle" aria-haspopup="true" aria-expanded="false">Export</button>
+            <div id="export-menu" class="menu" hidden>
+              <button data-export="json">report.json</button>
+              <button data-export="csv">findings.csv</button>
+              <button data-export="special">special-hours.csv</button>
+              <button data-export="google">google-updates.csv</button>
+              <button data-export="html">report.html</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="demo-banner" class="banner" hidden>Demo mode — running outside the extension on the sample data in <code>examples/</code>. Nothing is saved.</div>
+      <div id="progress" class="progress" hidden><span></span></div>
+      <section id="view" aria-live="polite"></section>
+    </div>
+  </div>
+  <aside id="drawer" class="drawer" aria-hidden="true" aria-label="Location detail">
+    <div class="drawer-head"><h2 id="drawer-title"></h2><button id="drawer-close" aria-label="Close">✕</button></div>
+    <div id="drawer-body"></div>
+  </aside>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>
