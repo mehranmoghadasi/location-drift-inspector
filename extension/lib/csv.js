@@ -11,7 +11,8 @@
  * @returns {string[][]} rows of cells; blank lines are dropped
  */
 export function parseCsv(text) {
-  const src = String(text ?? '').replace(/^﻿/, '');
+  const raw = String(text ?? '');
+  const src = raw.charCodeAt(0) === 0xfeff ? raw.slice(1) : raw; // UTF-8 BOM
   const rows = [];
   let row = [];
   let cell = '';

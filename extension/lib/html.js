@@ -71,7 +71,7 @@ export function visibleText(html) {
     .replace(/<[^>]+>/g, ' ');
   const lines = decodeEntities(s)
     .split('\n')
-    .map((l) => l.replace(/[\t  ]+/g, ' ').trim())
+    .map((l) => l.replace(/[\t\xa0 ]+/g, ' ').trim())
     .filter((l) => l !== '');
   return { text: lines.join('\n'), lines, telLinks };
 }
