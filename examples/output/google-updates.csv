@@ -1,0 +1,4 @@
+store_code,page_url,field,profile,google,page,verdict,action
+NG-KENS,https://yourdomain.com/locations/kensington,Primary phone,403-555-0120,403-555-0129,403-555-0129,page-backs-google,"Accept the update in the profile, or fix the page first"
+NG-AIRP,https://yourdomain.com/locations/airport-storage,Sunday hours,Open 24 hours,Closed ([DELETED]),Closed,page-backs-google,"Accept the update in the profile, or fix the page first"
+NG-MAHG,https://yourdomain.com/locations/mahogany,Saturday hours,10:00–14:00,Closed ([DELETED]),10:00–14:00,page-backs-profile,Reject the update; the page supports your value
